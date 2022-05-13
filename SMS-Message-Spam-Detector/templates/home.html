@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Home</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/sysles.css">-->
+    <link rel="stylesheet" href= "/static/lib/skelaton/normalize.css" />
+    <link rel="stylesheet" href= "/static/lib/skelaton/skeleton.css" />
+</head>
+<body>
+
+        <header>
+            <div class="container">
+                <div id="brandname" style="color:blue;font-size:20;text-align:center;">
+                    <h1>Machine Learning App with Flask</h1>
+                </div>
+                <h3 style="color:red;font-size:20;text-align:center;">Spam Detector for Text Messages</h2>
+            </div>
+        </header>
+
+        <div class="container" style=text-align:center;">
+            <form action="{{ url_for('predict')}}"  method="POST">
+                <p>Enter your text-massage here</p>
+                <!-- <input type="text" name="comment"/> -->
+                <textarea name="message" placeholder="Please enter a text message here to see if it is a spam mail" rows="4" cols="50"></textarea>
+                <br/>
+
+                <input type="submit" class="btn-info" value="predict">
+                
+            </form>
+    
+        </div>
+    
+    
+    
+</body>
+</html>

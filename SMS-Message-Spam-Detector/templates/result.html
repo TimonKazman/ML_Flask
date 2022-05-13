@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Home</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/sysles.css">-->
+    <link rel="stylesheet" href= "/static/lib/skelaton/normalize.css" />
+    <link rel="stylesheet" href= "/static/lib/skelaton/skeleton.css" />
+</head>
+<body>
+    
+        <header>
+            <div class="container" >
+                <div id="brandname">
+                    ML App
+                </div>
+                <h2 >Spam-detector for text-massages</h2>
+            </div>
+        </header>
+        <p style="color:blue;font-size:20;text-align:center;"><b> Results for comment </b></p>
+        <div class="results">
+
+            {% if prediction == 2%}
+            <h2 style="color:red;text-align:center;">Spam!</h2>
+
+            {% elif prediction == 1%}
+            <h2 style="color:blue;text-align:center;">Not spam. Serious Message.</h2>
+
+            {% endif%}
+        </div>
+    </br>
+        <div class="container" style="text-align:center;">
+            <ul class ="navigation">
+                <li class="navigation-item">
+                    <a class="button button-primary"  href="/">Back</a>
+                </li>
+            </ul>
+            <div style="clear: both;">&nbsp;</div>
+        </div>
+
+    </body>
+    </html>
